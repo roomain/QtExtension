@@ -11,12 +11,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{F2E243D5-3B5F-405E-A7A6-A6545E69CAFA}</ProjectGuid>
+    <ProjectGuid>{44505B32-C482-455C-87AA-5DD422B607E6}</ProjectGuid>
     <Keyword>QtVS_v304</Keyword>
-    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0</WindowsTargetPlatformVersion>
-    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0.19041.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0.19041.0</WindowsTargetPlatformVersion>
     <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
-    <ProjectName>QtFileTools</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
@@ -62,13 +61,11 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)/common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)/common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
@@ -78,7 +75,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <PreprocessorDefinitions>QT_EXTENSION_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>QTWIDGETSEX_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -92,7 +89,7 @@
       <DebugInformationFormat>None</DebugInformationFormat>
       <Optimization>MaxSpeed</Optimization>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <PreprocessorDefinitions>QT_EXTENSION_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>QTWIDGETSEX_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -100,10 +97,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <QtMoc Include="FileDialogExtension.h" />
-    <ClInclude Include="qtfiletools_global.h" />
-    <QtMoc Include="FileDialog.h" />
-    <ClCompile Include="FileDialog.cpp" />
+    <ClCompile Include="HorizontalSlider.cpp" />
+    <ClCompile Include="OrientableLabel.cpp" />
+    <ClCompile Include="Palette.cpp" />
+    <ClCompile Include="PaletteManager.cpp" />
+    <ClCompile Include="PaletteTitleBar.cpp" />
+    <ClCompile Include="VerticalSlider.cpp" />
+    <QtMoc Include="VerticalSlider.h" />
+    <QtMoc Include="OrientableLabel.h" />
+    <QtMoc Include="PaletteTitleBar.h" />
+    <QtMoc Include="Palette.h" />
+    <QtMoc Include="PaletteManager.h" />
+    <QtMoc Include="HorizontalSlider.h" />
+    <ClInclude Include="qtwidgetsex_global.h" />
+    <QtMoc Include="HoverButton.h" />
+    <ClCompile Include="HoverButton.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="HorizontalSlider.ui" />
+    <QtUic Include="PaletteTitleBar.ui" />
+    <QtUic Include="VerticalSlider.ui" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

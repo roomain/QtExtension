@@ -32,11 +32,11 @@ namespace Qt::FileTools
         FileDiagArgs& setCaption(const QString& caption)noexcept;
         FileDiagArgs& setDirectory(const QString& directory)noexcept;
         FileDiagArgs& setFilter(const QString& filter)noexcept;
-        FileDiagArgs& FileDiagArgs::setExtensionWidget(FileDialogExtension* pExt)noexcept;
+        FileDiagArgs& setExtensionWidget(FileDialogExtension* pExt)noexcept;
         QString caption()const noexcept;
         QString directory()const noexcept;
         QString filter()const noexcept;
-        FileDialogExtension* FileDiagArgs::extensionWidget()const noexcept;
+        FileDialogExtension* extensionWidget()const noexcept;
         bool isOpenFile()const noexcept;
     };
 
