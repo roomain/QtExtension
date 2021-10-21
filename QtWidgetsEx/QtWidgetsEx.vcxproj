@@ -98,9 +98,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="HorizontalSlider.cpp" />
+    <ClCompile Include="LongPressButton.cpp" />
     <ClCompile Include="OrientableLabel.cpp" />
     <ClCompile Include="Palette.cpp" />
     <ClCompile Include="PaletteManager.cpp" />
+    <ClCompile Include="PaletteTaskBar.cpp" />
     <ClCompile Include="PaletteTitleBar.cpp" />
     <ClCompile Include="VerticalSlider.cpp" />
     <QtMoc Include="VerticalSlider.h" />
@@ -109,12 +111,15 @@
     <QtMoc Include="Palette.h" />
     <QtMoc Include="PaletteManager.h" />
     <QtMoc Include="HorizontalSlider.h" />
+    <QtMoc Include="PaletteTaskBar.h" />
+    <ClInclude Include="LongPressButton.h" />
     <ClInclude Include="qtwidgetsex_global.h" />
     <QtMoc Include="HoverButton.h" />
     <ClCompile Include="HoverButton.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="HorizontalSlider.ui" />
+    <QtUic Include="PaletteTaskBar.ui" />
     <QtUic Include="PaletteTitleBar.ui" />
     <QtUic Include="VerticalSlider.ui" />
   </ItemGroup>

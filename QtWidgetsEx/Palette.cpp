@@ -30,7 +30,7 @@ namespace Qt::WidgetsEx
 	void Palette::setTitle(const QString& sTitle)
 	{
 		setWindowTitle(sTitle);
-		PaletteTitleBar* pTitlebar = static_cast<PaletteTitleBar*>(titleBarWidget());
+		auto pTitlebar = static_cast<PaletteTitleBar*>(titleBarWidget());
 		if (pTitlebar)
 			pTitlebar->setTitle(sTitle);
 	}
@@ -38,28 +38,28 @@ namespace Qt::WidgetsEx
 	void Palette::setIcon(const QIcon& icon)
 	{
 		m_icon = icon;
-		PaletteTitleBar* pTitlebar = static_cast<PaletteTitleBar*>(titleBarWidget());
+		auto pTitlebar = static_cast<PaletteTitleBar*>(titleBarWidget());
 		if (pTitlebar)
 			pTitlebar->setIcon(icon);
 	}
 
 	void Palette::setIconClose(const QIcon& closeIcon)
 	{
-		PaletteTitleBar* pTitlebar = static_cast<PaletteTitleBar*>(titleBarWidget());
+		auto pTitlebar = static_cast<PaletteTitleBar*>(titleBarWidget());
 		if (pTitlebar)
 			pTitlebar->setIconClose(closeIcon);
 	}
 
 	void Palette::setIconReduce(const QIcon& reduceIcon)
 	{
-		PaletteTitleBar* pTitlebar = static_cast<PaletteTitleBar*>(titleBarWidget());
+		auto pTitlebar = static_cast<PaletteTitleBar*>(titleBarWidget());
 		if (pTitlebar)
 			pTitlebar->setIconReduce(reduceIcon);
 	}
 
 	void Palette::setIconFoldUnfold(const QIcon& foldIcon)
 	{
-		PaletteTitleBar* pTitlebar = static_cast<PaletteTitleBar*>(titleBarWidget());
+		auto pTitlebar = static_cast<PaletteTitleBar*>(titleBarWidget());
 		if (pTitlebar)
 			pTitlebar->setIconFoldUnfold(foldIcon);
 	}
