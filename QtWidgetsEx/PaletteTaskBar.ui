@@ -36,7 +36,7 @@
     <number>0</number>
    </property>
    <item>
-    <widget class="QPushButton" name="pBtnPrev">
+    <widget class="LongPressButton" name="pBtnPrev">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
        <horstretch>0</horstretch>
@@ -82,7 +82,7 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>495</width>
+        <width>477</width>
         <height>18</height>
        </rect>
       </property>
@@ -120,7 +120,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="pBtnNext">
+    <widget class="LongPressButton" name="pBtnNext">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
        <horstretch>0</horstretch>
@@ -141,6 +141,13 @@
   </layout>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>LongPressButton</class>
+   <extends>QPushButton</extends>
+   <header>longpressbutton.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
