@@ -1,5 +1,6 @@
 #pragma once
 #include <QWidget>
+#include "qtwidgetsex_global.h"
 namespace Ui { class PaletteTitleBar; };
 
 namespace Qt::WidgetsEx
@@ -24,7 +25,7 @@ namespace Qt::WidgetsEx
 
 	class Palette;
 
-	class PaletteTitleBar : public QWidget
+	class QTWIDGETSEX_EXPORT PaletteTitleBar : public QWidget
 	{
 		Q_OBJECT
 	public:

@@ -112,7 +112,7 @@
     <QtMoc Include="PaletteManager.h" />
     <QtMoc Include="HorizontalSlider.h" />
     <QtMoc Include="PaletteTaskBar.h" />
-    <ClInclude Include="LongPressButton.h" />
+    <QtMoc Include="LongPressButton.h" />
     <ClInclude Include="qtwidgetsex_global.h" />
     <QtMoc Include="HoverButton.h" />
     <ClCompile Include="HoverButton.cpp" />

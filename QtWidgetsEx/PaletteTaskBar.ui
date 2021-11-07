@@ -36,7 +36,7 @@
     <number>0</number>
    </property>
    <item>
-    <widget class="QPushButton" name="pBtnPrev">
+    <widget class="Qt::WidgetsEx::LongPressButton" name="pBtnPrev">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
        <horstretch>0</horstretch>
@@ -120,7 +120,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="pBtnNext">
+    <widget class="Qt::WidgetsEx::LongPressButton" name="pBtnNext">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
        <horstretch>0</horstretch>
@@ -141,6 +141,13 @@
   </layout>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>Qt::WidgetsEx::LongPressButton</class>
+   <extends>QPushButton</extends>
+   <header>Longpressbutton.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

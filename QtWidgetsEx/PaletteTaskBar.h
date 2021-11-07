@@ -1,20 +1,23 @@
 #pragma once
-
+#include "qtwidgetsex_global.h"
 #include <QWidget>
 namespace Ui { class PaletteTaskBar; };
 
-class PaletteTaskBar : public QWidget
+namespace Qt::WidgetsEx
 {
-	Q_OBJECT
+	class QTWIDGETSEX_EXPORT PaletteTaskBar : public QWidget
+	{
+		Q_OBJECT
 
-public:
-	PaletteTaskBar(QWidget *parent = Q_NULLPTR);
-	~PaletteTaskBar();
+	public:
+		PaletteTaskBar(QWidget* parent = Q_NULLPTR);
+		~PaletteTaskBar();
 
-private:
-	Ui::PaletteTaskBar *ui;
-	void onScrollRangeChanged(int iMin, int iMax);
-	void onScroll(int iValue);
-	void onPrev();
-	void onNext();
-};
+	private:
+		Ui::PaletteTaskBar* ui;
+		void onScrollRangeChanged(int iMin, int iMax);
+		void onScroll(int iValue);
+		void onPrev();
+		void onNext();
+	};
+}
